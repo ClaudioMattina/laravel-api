@@ -23,7 +23,7 @@ export default {
 
     methods:{
         getPosts(){
-            axios.get('http://localhost:8000/api/posts')
+            axios.get('http://localhost:8000/api/test')
             .then((result)=>{
                 console.log(result)
             })

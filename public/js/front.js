@@ -1951,7 +1951,7 @@ __webpack_require__.r(__webpack_exports__);
   },
   methods: {
     getPosts: function getPosts() {
-      axios.get('http://localhost:8000/api/posts').then(function (result) {
+      axios.get('http://localhost:8000/api/test').then(function (result) {
         console.log(result);
       })["catch"](function (error) {
         console.warn(error);
