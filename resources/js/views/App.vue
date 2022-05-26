@@ -1,17 +1,24 @@
 <template>
 
     <div>
-        <Post/>
+        <PostList/>
     </div>
 
 </template>
 
 <script>
-import Post from '../components/Post.vue'
+import PostList from '../components/PostList.vue'
 export default {
     name:"App",
+
+    data(){
+        return{
+            posts:[]
+        }
+    },
+
     components:{
-        Post,
+        PostList,
     },
 }
 </script>
