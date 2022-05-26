@@ -1955,7 +1955,7 @@ __webpack_require__.r(__webpack_exports__);
 
       axios.get('http://localhost:8000/api/test').then(function (results) {
         console.log(results.data);
-        _this.posts = results.data;
+        _this.posts = results.data.data;
       })["catch"](function (error) {
         console.warn(error);
       });
