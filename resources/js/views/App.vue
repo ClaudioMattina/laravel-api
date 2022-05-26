@@ -1,10 +1,18 @@
 <template>
-    <h1>ci siamo</h1>
+
+    <div>
+        <Post/>
+    </div>
+
 </template>
 
 <script>
+import Post from '../components/Post.vue'
 export default {
-
+    name:"App",
+    components:{
+        Post,
+    },
 }
 </script>
 
