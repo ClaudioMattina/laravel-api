@@ -18,10 +18,7 @@ class PostController extends Controller
 
         $posts = Post::paginate(10);
 
-        return response()->json(
-            [
-                'results'=> $posts,
-            ]);
+        return response()->json($posts);
     }
 
     /**

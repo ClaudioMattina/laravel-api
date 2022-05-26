@@ -1,7 +1,7 @@
 <template>
 
     <div>
-        <Post/>
+        <Post v-for="(post,index) in posts" :key='index'/>
     </div>
 
 </template>
@@ -24,11 +24,13 @@ export default {
     methods:{
         getPosts(){
             axios.get('http://localhost:8000/api/test')
-            .then((result)=>{
-                console.log(result)
+            .then((results)=>{
+                console.log(results.data);
+                this.posts = results.data;
+                
             })
             .catch((error)=>{
-                console.warn(error)
+                console.warn(error);
             });
         }
     },

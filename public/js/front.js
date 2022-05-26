@@ -1951,8 +1951,11 @@ __webpack_require__.r(__webpack_exports__);
   },
   methods: {
     getPosts: function getPosts() {
-      axios.get('http://localhost:8000/api/test').then(function (result) {
-        console.log(result);
+      var _this = this;
+
+      axios.get('http://localhost:8000/api/test').then(function (results) {
+        console.log(results.data);
+        _this.posts = results.data;
       })["catch"](function (error) {
         console.warn(error);
       });
@@ -2481,9 +2484,16 @@ var render = function () {
   var _vm = this
   var _h = _vm.$createElement
   var _c = _vm._self._c || _h
-  return _c("div")
+  return _vm._m(0)
 }
-var staticRenderFns = []
+var staticRenderFns = [
+  function () {
+    var _vm = this
+    var _h = _vm.$createElement
+    var _c = _vm._self._c || _h
+    return _c("div", [_c("h1", [_vm._v("ciao")])])
+  },
+]
 render._withStripped = true
 
 
@@ -2505,7 +2515,13 @@ var render = function () {
   var _vm = this
   var _h = _vm.$createElement
   var _c = _vm._self._c || _h
-  return _c("div", [_c("Post")], 1)
+  return _c(
+    "div",
+    _vm._l(_vm.posts, function (post, index) {
+      return _c("Post", { key: index })
+    }),
+    1
+  )
 }
 var staticRenderFns = []
 render._withStripped = true
