@@ -1,5 +1,4 @@
 <div class="container text-center bg-primary">
-    <h1>Questa è la mia index</h1>
 
 </div>
 
