@@ -17,13 +17,13 @@ export default {
 
     data(){
         return{
-            posts:[]
+            posts:[],
         }
     },
 
     methods:{
         getPosts(){
-            axios.get('http://localhost8000/api/test')
+            axios.get('http://localhost:8000/api/posts')
             .then((result)=>{
                 console.log(result)
             })
